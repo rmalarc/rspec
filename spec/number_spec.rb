@@ -71,4 +71,20 @@ describe Number do
 
 	end
 
+  context "#whats_the_number" do
+    it "It should print out the number in binary and hex" do
+      number_mock = double("whats_the_number")
+      number_mock.should_receive(:to_binary)
+      number_mock.should_receive(:to_hex)
+
+#      Number.should_receive(:to_binary).and_return number_mock
+#      Number.should_receive(:to_hex).and_return number_mock
+
+      wrapper = Number.new(2)
+      wrapper.whats_the_number
+    end
+
+  end
+
+
 end

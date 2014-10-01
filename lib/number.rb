@@ -40,6 +40,11 @@ class Number
 		@number.to_s(base)
 	end
 
+	def whats_the_number
+		number_string = @number.to_s
+		"The number is " + number_string + ". It's 0b"+ to_binary+ " in binary and in hex is: 0x"+to_hex + "f. If it was money, you could buy "+ number_string + " widgets for a dollar each. There are at least "+number_string+" stars in the cosmos."
+	end
+
 end
 
-binding.pry
+#binding.pry
